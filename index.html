@@ -3,19 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SawaD's Container</title>
+    <meta name="description" content="This is SawaD's first WebSite!!!">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/sanitize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <h1>This is SawaD's HomePage!</h1>
-    <p>いろいろなコンテンツを追加していきましょう。<a href="https://www.google.com/">Let's Go Google</a></p>
-         
-    <h2>これは小見出し</h2>
-    
-    <section>
-        <h1>About Me</h1>
-        <p>Name: 澤田昂大</p>
-        <p>Birthday: 1995/06/13</p>
+
+
+
+    <section class="section">
+        <h1 class="section-headline">About</h1>
+        <figure class="about">
+            <img src="./assets/images/osaka.png" width="600px" alt="osaka">
+            <figcaption class="about-caption"> 
+            <!-- 図や画像の説明のテキストを入れておく -->
+                <h2 class="about-headline">What I Can</h2>
+                <div class="about-description">
+                    <ul>
+                        <li>中高地理の情報発信・自作教材の共有</li>
+                        <li>作問に便利な図・グラフの作成ツール提供</li>
+                        <li>各種データベースの利用方法</li>
+                        <li>Googleスプレッドシート活用術</li>
+                        <li>GAS（Google Apps Script）活用術</li>
+                        <li>プログラミング（Python, JavaScript, R, GAS）情報発信</li>
+                        <li>その他備忘録</li>
+                    </ul>
+                </div>
+            </figcaption>
+        </figure>
     </section>
-  
+
+    <section class="section section-secoundary">
+    <!-- classを拡張して使い回すために2つめのクラス（section-secoundary）をつける -->
+        <h1 class="section-headline">Graphs</h1>
+
+
+        <!-- gridとgrid-col-xの2つのクラスを掛け合わせる -->
+        <ul class="grid grid-col-4">
+            <li class="grid-item">
+                <dl class="graph">
+                    <dt class="graph-title">雨温図</dt>
+                    <dd class="graph-img">
+                        <img src="./assets/images/uonzu_CapeTown.png"  height="200" alt="雨温図">
+                    </dd>
+                    <dd class="graph-description">
+                        text text text text text text text text text<br> text text text text text text text... 
+                    </dd>
+                </dl>
+            </li>
+            <li class="grid-item">
+                <dl class="graph">
+                    <dt class="graph-title">ハイサーグラフ</dt>
+                    <dd class="graph-img">
+                        <img src="./assets/images/hythergraph_Osaka.png"  height="200" alt="ハイサーグラフ">
+                    </dd>
+                    <dd class="graph-description">
+                        text text text text text text text text text<br> text text text text text text text... 
+                    </dd>
+                </dl>
+            </li>
+            <li class="grid-item">
+                <dl class="graph">
+                    <dt class="graph-title">地形断面図</dt>
+                    <dd class="graph-img">
+                        <img src="./assets/images/geometric-section.png" height="200" alt="地形断面図">
+                    </dd>
+                    <dd class="graph-description">
+                        谷謙二研究室「Web地形断面図メーカー」によるデータを使用<br>
+                        グラフ加工用Excelシートを開発・提供<br> text text text text text text text... 
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="grid grid-col-2">
+            <li class="grid-item">
+                <dl class="graph">
+                    <dt class="graph-title">牛の頭数または牛肉の生産量</dt>
+                    <dd class="graph-img">
+                        <img src="./assets/images/cow_and_beaf.png"  
+                        height="250" alt="牛の頭数と牛肉の生産量">
+                    </dd>
+                    <dd class="graph-description">
+                        牛の頭数または牛肉の生産量のいずれか<br>また図中A・Bはアメリカ合衆国またはブラジル<br>統計年次は2018年　『世界国勢図会 2020/21年版』より作成<br> text text text text text text text... 
+                    </dd>
+                </dl>
+            </li>
+            <li class="grid-item">
+                <dl class="graph">
+                    <dt class="graph-title">米または小麦の単位面積あたり収穫量（地域別）</dt>
+                    <dd class="graph-img">
+                        <img src="./assets/images/wheat_and_rice.png"  height="250" alt="米と小麦の単位面積あたり収穫量">
+                    </dd>
+                    <dd class="graph-description">
+                        地域別の単位面積あたり収穫量。図は米と小麦のいずれか<br>統計年次は2018年　『世界国勢図会 2020/21年版』より作成<br>text text text text text text text... 
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="grid grid-col-2">
+            <li class="grid-item">
+                <dl class="graph">
+                    <dt class="graph-title">Graphs by ggplot2 (R programmig) ①</dt>
+                    <dd class="graph-img">
+                        <img src="./assets/images/exp1_plot2.png"  height="170" alt="ggplot2①">
+                    </dd>
+                    <dd class="graph-description">
+                        Plot results and fit models on logistic function<br>
+                        text text text text text text text text text<br>
+                        text text text text text text text text text<br>
+                        text text text
+                    </dd>
+                </dl>
+            </li>
+            <li class="grid-item">
+                <dl class="graph">
+                    <dt class="graph-title">Graphs by ggplot2 (R programmig) ②</dt>
+                    <dd class="graph-img">
+                        <img src="./assets/images/exp1_syuseibun2.png"  height="170" alt="ggplot2②">
+                    </dd>
+                    <dd class="graph-description">
+                        show results by violin plot<br>
+                        text text text text text text text text text<br>
+                        text text text
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h2>About Me</h2>
+        <div>
+            <ul>
+                <li class="list">Name: 澤田昂大</li>
+                <li class="list">Birthday: 1995/06/13</li>
+                <li class="list">blood type: AB</li>
+                <li class="list" id="movie">Favorite Movie: <a href="https://wwws.warnerbros.co.jp/matrix-movie/"> The Matrix</a></li>
+            </ul>
+        </div>
+        
+    </section>
+
+
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>

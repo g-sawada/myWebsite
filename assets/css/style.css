@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+
+/*
+Base Style
+*/
+body {
+    /* font-familyを設定。Noto Sans JPはgoogleフォントからリンク。その後ろは代替案。リンクはhttps://willcloud.jp/knowhow/font-family/#font-family-4 */
+
+    font-family: 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+    background-color: rgba(236, 247, 220, 0.735);
+    /* background-image: url("../../assets/images/desert_hd.jpg"); */
+    /* background-size: 100%; */
+    margin: 20px;
+
+}
+
+/* 
+section 
+*/
+.section {
+    padding: 30px 15px;
+    margin:0 0 15px;
+}
+.section.section-secoundary{
+    background: rgb(255, 255, 255);
+}
+
+.section-headline {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 40px; /* 3つの場合は「上」「左右」「下」 */
+}
+
+/* about */
+.about {
+    margin: 0;
+    display: flex;
+}
+.about-caption {
+    padding-left: 30px;
+}
+.about-headline {
+    margin: 0 0 20px;
+    font-size: 30px;
+}
+.about-description {
+    font-size: 18px;
+}
+
+
+/* grid & graph */
+.grid {
+    margin: 0 0 40px;
+    padding: 0;
+    display: flex;
+    align-items: center; /*display:flexが付く要素を中央揃え*/
+    /* justify-content: center; */
+}
+
+.grid-item {
+    /* デフォルトでlist-styleが入っているので削除 */
+    list-style: none;
+}
+
+.grid-col-2 > .grid-item {
+    width: 50%;
+}
+
+.grid-col-4 > .grid-item {
+    /* width: 25%; */
+}
+
+.graph{
+    padding: 5px
+}
+.graph-title{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.graph-img{}
+.graph-description{
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+参考サイト
+display: flex チートシート
+https://www.webcreatorbox.com/tech/css-flexbox-cheat-sheet#flexbox14 
+
+
+*/
