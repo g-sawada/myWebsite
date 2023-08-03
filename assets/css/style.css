@@ -18,6 +18,17 @@ body {
 
 }
 
+label, input, textarea, select, button {
+    cursor: pointer;
+}
+button {
+    border: 0;
+}
+button.button-submittion {
+    background-color:  rgba(186, 255, 82, 0.735);
+    color: #333;
+}
+
 /* 
 section 
 */
@@ -36,7 +47,39 @@ section
     margin: 0 0 40px; /* 3つの場合は「上」「左右」「下」 */
 }
 
-/* about */
+.section-button{
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* 
+grid （よく使うので序盤に）
+*/
+.grid {
+    margin: 0 0 40px;
+    padding: 0;
+    display: flex;
+    align-items: center; /*display:flexが付く要素を中央揃え*/
+    /* justify-content: center; */
+}
+
+.grid-item {
+    list-style: none;   /* デフォルトでlist-styleが入っているので削除 */
+}
+
+.grid-col-2 > .grid-item {
+    width: 50%;
+}
+.grid-col-3 > .grid-item {
+    width: 33.3%;
+}
+.grid-col-4 > .grid-item {
+    /* width: 25%; */
+}
+
+/* 
+about 
+*/
 .about {
     margin: 0;
     display: flex;
@@ -50,31 +93,13 @@ section
 }
 .about-description {
     font-size: 18px;
+    color: rgb(128, 1, 1);
 }
 
 
-/* grid & graph */
-.grid {
-    margin: 0 0 40px;
-    padding: 0;
-    display: flex;
-    align-items: center; /*display:flexが付く要素を中央揃え*/
-    /* justify-content: center; */
-}
-
-.grid-item {
-    /* デフォルトでlist-styleが入っているので削除 */
-    list-style: none;
-}
-
-.grid-col-2 > .grid-item {
-    width: 50%;
-}
-
-.grid-col-4 > .grid-item {
-    /* width: 25%; */
-}
-
+/* 
+graph 
+*/
 .graph{
     padding: 5px
 }
@@ -90,11 +115,200 @@ section
 
 
 
+/* 
+card
+ */
+.card {
+    padding: 0 10px;
+}
+.card-link {
+    display: block;  /* aタグはインライン要素なのでブロック指定 */
+    color: #333;
+    text-decoration: none; /* hrefはデフォルトで青文字+アンダーバーが付くので黒字とアンダーバー削除 */
+
+    position:relative;
+    transition: background-color .25s; /* hoverしたときのbackground-colorの変化をゆるやかに */
+}
+
+.card-link:hover { /* 疑似セレクタhoverでマウスオーバーしたときのデザインを指定 */
+    background-color: rgba(209, 224, 186, 0.735);
+}
+
+.card-label {
+    position: absolute; /* 親要素（card-link）はrelative，子要素をabsoluteにして枠内で自由に配置 */
+    left: 0;
+    top: 0;
+
+    background-color: #999;
+    color: #fff;
+    display: block;
+    padding: 5px 10px;
+    font-size: 10px;
+}
+.card-image {
+    width: 100%;
+    height: auto; /* 横のサイズに対して画像の比率は守る */
+}
+.card-info {
+    padding: 5px 10px;
+}
+/* .card-time {} */
+.card-headline {
+    margin: 0;
+}
+.card-description {
+    margin: 0;
+}
+
+/* abator */
+.avator {
+    display: flex;
+    flex-direction: row-reverse; /* flexの並び順を逆に（dtとddの順番をhtml上守らないといけないため） */
+    align-items: center; /* 要素の高さを中央揃え */
+    justify-content: start; /* flexコンテナの起点（通常左端）に揃える */
+    padding: 10px;
+}
+.avator-name {
+    font-weight: bold;
+    padding-left: 15px;
+}
+.avator-image {
+    margin: 0;
+    border-radius: 50%; /*完全な円形にするなら50%，  5px　→ 角丸に */
+    overflow: hidden; /* はみ出た部分を隠す（border-radiusとセットで使うと便利） */
+}
+
+/* 
+button 
+*/
+.button{
+    display: inline-block; /* インラインだが上下左右にpadding・marginを持てるようになる */
+    color: #fff;
+    font-weight: bold;
+    background-color: #333;
+    text-decoration: none;
+    text-align: center;
+
+    padding: 15px 60px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px #bbb; /*影をつける x軸，y軸，ぼかし，色 */
+    transition: box-shadow .25s;
+}
+.button:hover{ /* ボタンホバーで影を無くす（transitionは.button本体に） */
+    box-shadow: 0 0 0 #bbb;
+}
 
 
 
 
+/* 
+.select .input .radio .textarea 
+*/
+.select {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-width: 500px;
+}
+.input {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-width: 500px;
+}
+.radio {
+    margin: 0 10px;
+}
+.textarea {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-width: 500px;
+    min-height: 100px;
+}
 
+/* 
+form
+*/
+/* .form {} */
+.form-table {
+    margin: 0 auto;
+}
+
+/* .form-table tr {} */
+.form-table th {
+    padding: 10px;
+    text-align: left;
+}
+
+.form-table td {
+    padding: 10px;
+}
+
+.form-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/* 
+gallery 
+*/
+.gallery {
+    margin: 40px 0;
+    padding: 20px;
+    text-align: center;
+}
+.gallery > img {
+    margin: 0 15px;
+}
+
+
+/* 
+footer 
+*/
+.footer {
+    background-color: #333;
+    color: #fff;
+}
+.footer-map {
+    margin: 0;
+    padding: 40px 15px;
+    display: flex;
+    align-items: center; /* フレックスコンテナ上下中央揃え */
+    justify-content: center; /* フレックスコンテナ左右中央揃え */
+}
+.footer-map > iframe{
+    width: 60%;
+}
+.footer-mapinfo {
+    width: 40%;
+    padding: 15px;
+    /* footer-mapと合わせて100%になるように比率を決めてあげる */
+}
+.footer-maplogo {
+    font-size: 25px;
+    font-weight: bold;
+}
+.footer-maplogo > svg {
+    fill: transparent;
+    margin-right: 10px;
+}
+.footer-mapaddress {
+    font-style: normal; /* addressタグはデフォルトでイタリック体 */
+}
+.footer-mapaddress > a {
+    color: #fff;
+}
+.footer-line {
+    border-color: #444;
+}
+.footer-copyright {
+    /* smallタグがインライン要素なのでdisplay: blockを設定し，横幅いっぱいまで広げた状態にしてから操作 */
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
 
 
 
